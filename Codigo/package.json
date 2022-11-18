@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "bootstrap-icons": "^1.10.2",
+    "core-js": "^3.26.1",
+    "deasync": "^0.1.28",
+    "jquery": "^3.6.1",
+    "popper.js": "^1.16.1"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Trabalho2 - Aula 3 e 4</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="d-flex flex-column vh-100">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand justify-content-between" href="index.html">Logo</a>
+      <div></div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Seletor de Cor <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cronômetro</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="pt-3">
+    </header>
+    <main class="flex-grow-1 pb-3 text-justify">
+
+      <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+        <div class="container">
+          <h1>Contador</h1>
+          <p class="lead">Utilize os botoes abaixo para registrar uma contagem.</p>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row justify-content-xl-center d-flex flex-sm-nowrep">
+          <div class="col-12 col-sm-6 col-xl-3 text-sm-right form-group order-2">
+            <button onclick="decrementar()" type="button" class="btn bg-danger text-white form-control border-0">
+              <i class="bi bi-dash-circle-fill"></i>
+              1
+            </button>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3 text-sm-left form-group order-1 mb-0">
+            <button onclick="incrementar()" type="button" class="btn bg-success text-white form-control border-0">
+              <i class="bi bi-plus-circle-fill"></i>
+              1
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="contador" class="container text-center font-weight-bold" style="font-size:100px;">0</div>
+
+     <script>
+      let contador = document.getElementById("contador");
+      function incrementar() {
+        contador.innerHTML = parseInt(contador.innerText) + 1;
+      }
+      function decrementar() {
+        contador.innerHTML = parseInt(contador.innerText) - 1;
+      }
+     </script>
+    </main>
+    <footer class="text-secondary text-center font-italic pb-2">
+      Copyright &copy; 2022 Matheus Aron Velasques - Trabalho 2
+    </footer>
+  </div>
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/popper.js/dist/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
